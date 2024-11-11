@@ -19,7 +19,7 @@ interest rates and installment numbers, as well as handling of loan payments wit
 * Git
 
 ### Clone the repository
-git clone https://github.com/your-username/loan-api-service.git
+git clone https://github.com/ssamet-uzun/loan-api.git
 
 ### Go to project directory
 cd loan-api
