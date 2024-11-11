@@ -1,0 +1,29 @@
+server:
+  port: 8090
+  servlet:
+    contextPath: /api/v1
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:ing-hub-db
+    driverClassName: org.h2.Driver
+    username: sa
+    password: pass
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+jwt:
+  secret: 5D8QGeL6jO5hWtnw
+  expiration: 36000000
+
+ALLOWING_NUMBER_OF_INSTALLMENT: 6, 9, 12, 24
+ALLOWING_INTEREST_RATE: 0.1f, 0.2f, 0.3f, 0.4f, 0.5f
+
+domain:
+  allowing-number-of-installment: ${ALLOWING_NUMBER_OF_INSTALLMENT}
+  allowing-interest-rate: ${ALLOWING_INTEREST_RATE}
