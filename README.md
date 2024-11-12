@@ -115,9 +115,6 @@ Now we have a user who can use the system
 
 Before going on, get token for user who is newly created.
 
-No need to send customer id, system will automatically detect user with customer by parsing token. You cannot create a 
-loan for other users.
-
 curl --location 'http://localhost:8090/api/v1/loan/create-loan' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer __TOKEN___' \
@@ -138,16 +135,10 @@ curl --location 'http://localhost:8090/api/v1/loan/list-installments-by-loan-id?
 
 ### To list loan on customer
 
-Users can see all loans that is on them. You can use this api with customer id, but if customer wants to see loans 
-of other customers, system will now allow them
-
 curl --location 'http://localhost:8090/api/v1/loan/list-loan-by-customer-id?customerId=1&page=0&size=10' \
 --header 'Authorization: Bearer __TOKEN__'
 
 ### To pay loan
-
-To pay loan, user should send a request with loan id, and amount that will paid. Customer cannot pay the loan of 
-other customers, system will now allow this operation
 
 curl --location 'http://localhost:8090/api/v1/loan/pay-loan' \
 --header 'Content-Type: application/json' \
